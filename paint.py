@@ -1,7 +1,11 @@
 import tkinter as tk
 
 
-def move_by_keys(event):
+def move_by_keys(event): 
+    info_coords = canvas.coords(oval)
+    x = info_coords[0]
+    y = info_coords[1]
+    label.config(text=str(x) + ' ' + str(y))
     if event.keysym == 'Up':
         canvas.move(oval, 0, -20)
     elif event.keysym == 'Down':
